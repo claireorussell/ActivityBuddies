@@ -9,13 +9,12 @@ class AddPostForm extends React.Component {
     super(props)
 
     this.state = {
-      user_name: getDecodedToken().username,
+      user_name: '',
       notes: '',
       dateTime: '',
       tracks: '',
       skill: '',
       location_id: '',
-      user_id: getDecodedToken().id
     }
     this.handleChange = this.handleChange.bind(this),
       this.handleSubmit = this.handleSubmit.bind(this)
@@ -74,12 +73,12 @@ class AddPostForm extends React.Component {
           </select>
 
 
-          <label className="frm-usr-lbl" htmlFor='name'>Tracks: </label>
+          <label className="frm-usr-lbl" htmlFor='name'>Area/Tracks: </label>
           <input
             className='frm-usr-ipt'
             type='text'
             name='tracks'
-            placeholder='tracks you are doing'
+            placeholder='Where will you go?'
             value={this.setState.tracks}
             onChange={this.handleChange}
           />

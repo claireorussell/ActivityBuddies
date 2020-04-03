@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { getProfile } from '../actions/'
+import { getProfile } from '../actions'
 import { getDecodedToken } from 'authenticare/client'
 
 class Profile extends React.Component {

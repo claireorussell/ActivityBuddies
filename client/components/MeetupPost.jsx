@@ -9,7 +9,6 @@ class MeetupPost extends React.Component {
         super(props)
     }
 
-    //TODO : add unclickability to rsvp
     buttonClicked = () => {
         this.props.dispatch(addRsvp(this.props.currentPost))
         this.props.dispatch(gotPostsByLocationID(this.props.location.id))
@@ -20,11 +19,7 @@ class MeetupPost extends React.Component {
       }
 
     render() {
-        
-        
         let active = !this.props.activeSkill || this.props.currentPost.skill == this.props.activeSkill
-        
-
         return(
             <div className={active ? "meetupCard" : "meetupCardInActive"}>
                 <h3> {this.props.currentPost.tracks} - {this.props.currentPost.user_name} </h3>

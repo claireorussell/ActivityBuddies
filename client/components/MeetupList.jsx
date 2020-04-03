@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { IfAuthenticated } from  './Authenticated'
+// import { IfAuthenticated } from  './Authenticated'
 import { getUpComingPosts } from '../actions/postListActions'
 import MeetupPost from './MeetupPost'
 
@@ -32,34 +32,26 @@ class MeetupList extends React.Component {
     render() {
         let today = new Date();
         let upPosts = this.props.upcomingposts.filter((newestposts) => {
-            // newestpost is array of all postsby location
-
             let postTime = new Date(newestposts.dateTime.split(' ').join(''))
-            // postTime variable format time of a post in yymmdd hh:mm
-            // delete space between date and T
-
-
             return postTime.getTime() > today.getTime()
-            //comparing time posted and current date+time
         })
 
         return (
             <div className="meetupList">
                 <h2>{this.props.location.name}</h2>
 
-                <form className="">
-                    <select className="skillDropdown" value={this.setState.skillLevel} onChange={this.handleChange}>
-                        <option value="">--Select your skill level--</option>
-                        <option value="Beginner">Beginner</option>
-                        <option value="Intermediate">Intermediate</option>
-                        <option value="Advanced">Advanced</option>
-                        <option value="Expert">Expert</option>
-                    </select>
-                </form>
-
-                <IfAuthenticated>
+                <div className='skillAdd'>
+                    <form className="">
+                        <select className="skillDropdown" value={this.setState.skillLevel} onChange={this.handleChange}>
+                            <option value="">Skill</option>
+                            <option value="Beginner">Beginner</option>
+                            <option value="Intermediate">Intermediate</option>
+                            <option value="Advanced">Advanced</option>
+                            <option value="Expert">Expert</option>
+                        </select>
+                    </form>
                     <button onClick={this.props.handleClick} className="addButton"> + </button>
-                </IfAuthenticated>
+                </div>
 
                 <div className="cardList">
                     {upPosts.map(((newposts, idx) => {

@@ -67,9 +67,6 @@ class LocationMeetups extends React.Component {
                        <img className='fmlImg' src="/images/fml.png" alt=" link to follow my lead site"/><p>Take a dog on your adventure!</p> 
                        </a> }
                         
-                        {/* <a >
-                       <img className='fmlImg' src="/images/fml.png" alt=" link to follow my lead site"/>
-                       </a> */}
                     </div>
 
                     <div className="postListingWrapper">
