@@ -261,13 +261,16 @@ font-family: 'Montserrat Subrayada', sans-serif;
     border-radius: 2em;
 }
 
+.postStart {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
 .cardList {
     width: 100%;
-    display: flex;
     justify-content: center;
-    flex-direction: row;
     flex-wrap: wrap;
-    margin-top: 0px;
     overflow-y: scroll;
     height: 65%;
 }
@@ -285,49 +288,25 @@ font-family: 'Montserrat Subrayada', sans-serif;
 }
 
 .meetupCard {
-
     display: flex;
     flex-direction: column;
-
-    background-color: black;
-    color: #F3F5F0;
-
-    margin-left: 15px;
-    margin-right: 15px;
-    margin-top: 10px;
-    padding: 5px;
-
+    background-color: rgb(242, 242, 242);
+    color: black;
     width: 85%;
-
     text-align: left;   
-    
     border-radius: 7px;
-    box-shadow: black;
-
-    transition: 0.3s;
-
+    height: 12rem;
 }
 
 .meetupCardInActive {
     display: flex;
     flex-direction: column;
-
-    background-color: #49526493;
-    color: #F3F5F0;
-
-    margin-left: 15px;
-    margin-right: 15px;
-    margin-top: 10px;
-    padding: 5px;
-
+    background-color: rgba(57, 57, 57, 0.303);
+    color: black;
     width: 85%;
-
     text-align: left;   
-    
     border-radius: 7px;
-    box-shadow: black;
-
-    transition: 0.3s;
+    height: 12rem;
 }
 
 .skillDropdown {
@@ -346,13 +325,13 @@ font-family: 'Montserrat Subrayada', sans-serif;
 
 .meetupCard p {
     text-align: center;
-    margin-top: 5px;
-    margin-bottom: none;
+    margin-top: 0px;
+    margin-bottom: 0px;
     font-weight: light;
 }
 
 .meetupCard h3 {
-    margin-left: 25px;
+    margin-left: 1rem;
     font-size: 1.25rem;
     font-weight: bold;
 }
@@ -373,13 +352,14 @@ font-family: 'Montserrat Subrayada', sans-serif;
     border-radius: 7px;
     height: 30px;
     background-color: black;
-    color: #F3F5F0;
-    transition-duration: 0.4s;
-    font-size: 18px;
+    color: green;
+    font-size: 1.25rem;
+    margin: 1.1rem;
+
 }
 
 .flagButton:hover {
-    background-color: lightgray;
+    color: lightgray;
 }
 
 /* DEFAULT NAVBAR SETTINGS */
@@ -664,9 +644,6 @@ background-color: #262626;
     font-weight: 600;
 }
 
-.meetupP {
-    font-size: 1.1rem;
-}
 
 .profileBlurb {
     font-size: .9rem

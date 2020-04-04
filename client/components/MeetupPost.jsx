@@ -22,7 +22,11 @@ class MeetupPost extends React.Component {
         let active = !this.props.activeSkill || this.props.currentPost.skill == this.props.activeSkill
         return(
             <div className={active ? "meetupCard" : "meetupCardInActive"}>
+                
+                <div className='postStart'>
                 <h3> {this.props.currentPost.tracks} - {this.props.currentPost.user_name} </h3>
+                <button className="flagButton" onClick={this.buttonClicked}> RSVP </button>
+                </div>
                 <p className="meetupSkill"> <span> Skill level: </span> {this.props.currentPost.skill} </p>
                 <p className="meetupTime"> <span> Meet at: </span> {this.props.currentPost.dateTime} </p>
                 <p className="meetupNotes"> <span> Notes: </span> {this.props.currentPost.notes} </p>
@@ -30,7 +34,7 @@ class MeetupPost extends React.Component {
                 <p>Attendees: {this.props.currentPost.attendees}</p>
                 
                 
-                   <button className="flagButton" onClick={this.buttonClicked}> RSVP </button>
+                   
                 
 
             </div>

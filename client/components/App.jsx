@@ -19,7 +19,7 @@ class App extends React.Component{
   return (
     <Router>
       <div>
-        {/* <Route path="/" component={Nav} /> */}
+        <Route path="/" component={Nav} />
         <h3 className='logo'>MOVE</h3>
         <Switch> 
           <Route exact path="/" component={Home} />

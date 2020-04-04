@@ -43,7 +43,7 @@ class MeetupList extends React.Component {
                 <div className='skillAdd'>
                     <form className="">
                         <select className="skillDropdown" value={this.setState.skillLevel} onChange={this.handleChange}>
-                            <option value="">Skill</option>
+                            <option value="">Skill level</option>
                             <option value="Beginner">Beginner</option>
                             <option value="Intermediate">Intermediate</option>
                             <option value="Advanced">Advanced</option>
