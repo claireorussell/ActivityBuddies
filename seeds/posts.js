@@ -14,7 +14,7 @@ exports.seed = function (knex) {
           skill: 'Expert',
           location_id: 1,
           attendees: 0, 
-          user_id: 1
+          user_id: 100,
         },
         {
           id: 2,
@@ -25,7 +25,7 @@ exports.seed = function (knex) {
           skill: 'Expert',
           location_id: 1,
           attendees: 0, 
-          user_id: 1
+          user_id: 100,
         },
         {
           id: 3,
@@ -36,7 +36,7 @@ exports.seed = function (knex) {
           skill: 'Advanced',
           location_id: 1,
           attendees: 0, 
-          user_id: 1
+          user_id: 100,
         },
         {
           id: 4,
@@ -47,7 +47,7 @@ exports.seed = function (knex) {
           skill: 'Beginner',
           location_id: 3,
           attendees: 0, 
-          user_id: 1
+          user_id: 100,
         },
         {
           id: 5,
@@ -58,7 +58,7 @@ exports.seed = function (knex) {
           skill: 'Advanced',
           location_id: 2,
           attendees: 0, 
-          user_id: 2
+          user_id: 100,
         },
         {
           id: 6,
@@ -69,7 +69,7 @@ exports.seed = function (knex) {
           skill: 'Beginner',
           location_id: 2,
           attendees: 0, 
-          user_id: 2
+          user_id: 100,
         },
         {
           id: 7,
@@ -80,7 +80,7 @@ exports.seed = function (knex) {
           skill: 'Intermediate',
           location_id: 3,
           attendees: 0, 
-          user_id: 2
+          user_id: 100,
         },
         {
           id: 8,
@@ -92,7 +92,7 @@ exports.seed = function (knex) {
           skill: 'Expert',
           location_id: 7,
           attendees: 0, 
-          user_id: 2,
+          user_id: 100,
         },
         {
           id: 9,
@@ -103,7 +103,7 @@ exports.seed = function (knex) {
           skill: 'Beginner',
           location_id: 7,
           attendees: 0, 
-          user_id: 2,
+          user_id: 100,
         },
         {
           id: 10,
@@ -114,7 +114,7 @@ exports.seed = function (knex) {
           skill: 'Intermediate',
           location_id: 7,
           attendees: 0,
-          user_id: 3
+          user_id: 100,
         },
         {
           id: 11,
@@ -125,7 +125,7 @@ exports.seed = function (knex) {
           skill: 'Expert',
           location_id: 5,
           attendees: 0, 
-          user_id: 3
+          user_id: 100,
         },
         {
           id: 12,
@@ -136,7 +136,7 @@ exports.seed = function (knex) {
           skill: 'Intermediate',
           location_id: 4,
           attendees: 0, 
-          user_id: 3
+          user_id: 100,
         },
         {
           id: 13,
@@ -147,7 +147,7 @@ exports.seed = function (knex) {
           skill: 'Beginner',
           location_id: 6,
           attendees: 0, 
-          user_id: 3
+          user_id: 100,
         }
       ]);
     });
