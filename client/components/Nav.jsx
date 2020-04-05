@@ -17,8 +17,8 @@ class Nav extends React.Component {
 
             <ul className="navbar">
                 <div className='navAuth'>
-                <li><Link to="/">Home</Link></li>
-                <IfAuthenticated><li><Link to="/profile">Profile</Link></li></IfAuthenticated>
+                <li id='logo'><Link to="/">MOVE</Link></li>
+                {/* <IfAuthenticated><li><Link to="/profile">Profile</Link></li></IfAuthenticated> */}
                 </div>
                 <div className='navAuth'>
                 <IfNotAuthenticated><li><Link to="/login">Login</Link></li></IfNotAuthenticated>

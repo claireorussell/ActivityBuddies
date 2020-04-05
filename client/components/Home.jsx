@@ -1,31 +1,39 @@
 import React from 'react'
+import { connect } from 'react-redux'
+import { Link } from 'react-router-dom'
 
-import ActivityList from './ActivityList'
+import { getActivities } from '../actions/index'
+import { setCurrentActivity } from '../actions/index'
 
-
-class App extends React.Component {
-  constructor() {
-    super()
-    this.state = {
-
+class Home extends React.Component {
+    constructor(props) {
+        super(props)
     }
- 
-  }
 
+    componentDidMount() {
+        this.props.dispatch(getActivities())
+    }
 
-  
-  render() {
-    return (
-      <div>
-          <ActivityList/>
-          <div className="about-blurb">
-          <p >Register with us and make new connections . Join an organised meet up or make your own and explore some of Wellington’s best outdoor activities. </p>
-          <p>Get out , meet up , move !</p>
-          </div>
+    handleClick(activity) {
+        this.props.dispatch(setCurrentActivity(activity)) // sets the global state of currentActivity
+    }
 
-      </div>
-    )
-  }
+    render() {
+        return (
+            <div className='activity-container'>
+                {this.props.activities.map(activity => {
+                    return <Link className='act-btn hover-1' to={'/move/'+activity.name} onClick={() => this.handleClick(activity)}><p className='home-btn-links' key={activity.id}>{activity.name}</p></Link>
+                })}
+            </div>
+        )
+    }
 }
 
-export default App
+function mapStateToProps(state) {
+    return {
+        activities: state.activities,
+        currentActivity: state.currentActivity
+    }
+}
+
+export default connect(mapStateToProps)(Home)

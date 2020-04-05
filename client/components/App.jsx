@@ -20,7 +20,7 @@ class App extends React.Component{
     <Router>
       <div>
         <Route path="/" component={Nav} />
-        <h3 className='logo'>MOVE</h3>
+        {/* <h3 className='logo'>MOVE</h3> */}
         <Switch> 
           <Route exact path="/" component={Home} />
           <Route path='/addpostform' component={AddPostForm} />
