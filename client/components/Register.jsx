@@ -30,35 +30,28 @@ class Register extends React.Component {
                 }
             })
     }
-
-    render() {
-
-        return (
-            <React.Fragment>
-                <div className="register-wrapper">
-                    <div className="register-column-one">
-                        <h2> Create An Account </h2>
-                    </div>
+        render() {
+            return (
+                <div className='activity-container'>
+                    <div className="register-wrapper">
                     <div className='register-column-two'>
-                        <div className='rego-wrapper'>
-                            
-                            <label>Username:</label>
-                            <input className='rego-input' type="text" name="username" onChange={this.handleChange} />
-                           
-                            <label>Password:</label>
-                            <input className='rego-input' type="password" name="password" onChange={this.handleChange} />
-                           
-                            <br />
-                            <button className='rego-button' type='button' onClick={this.handleClick}>Register</button>
+                            <h2> Register </h2>
+                            <div className='rego-wrapper'>
+                                <label className='rego-label'>Username:</label>
+                                <input className='rego-input' type="text" name="username" onChange={this.handleChange} />
+                            </div>
+                            <div className='rego-wrapper'>
+                                <label className='rego-label'>Password:</label>
+                                <input className='rego-input' type="password" name="password" onChange={this.handleChange} />
+                            </div>
+                            <button className='rego-button' type='button' onClick={this.handleClick}>Submit</button>
                         </div>
-
                     </div>
-
-
-                </div>
-            </React.Fragment>
-        )
-    }
+    
+    
+                    </div>
+            )
+        }
 }
 
 export default Register

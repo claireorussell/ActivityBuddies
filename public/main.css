@@ -373,56 +373,52 @@ justify-content: space-evenly;
 /* REGISTER PAGE */
 
 .register-wrapper {
-    display: flex;
-    align-content: justify;
-    margin: 5px auto;
+    justify-content: center;
     width: 60%;
-    height: auto;
-    border: 3px solid black;
-
-    background-color: rgba(0, 0, 0, 0.577);
+    height: 40%;
+    text-align: center;
 }
 
 .rego-wrapper {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    margin: 0.5rem;
 }
 
 .rego-button {
-    background-color: black;
-    text-align: center;
-    font-size: 2rem;
-    font-weight: bold;  
-    height: 60px;
-    width: auto;
-    border: none;
     color: black;
-    border-radius: 7px;
+    margin: auto;
+    margin-top: 1.2rem;
+    font-size: 1.5rem;
+    text-decoration: none !important;
+    border: none !important;
+    background-color: inherit;
+    outline: none;
 }
 
-.register-column-one {
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    margin: auto;
-    text-align: center;
-    height: 100%;
-    width: 40%;
-}
+
 
 .register-column-two {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-content: center;
-    margin: 20px;
-    height: 100%;
     width: 60%;
+    margin: 4rem 0rem 0rem 12rem;
+}
+.rego-label {
+    width:10rem;
 }
 
 .rego-input {
     height: 25px;
     font-size: 18px;
+    margin-left: 1rem;
+    width:15rem;
+    outline: none !important;
+    text-decoration: none !important;
+    border: none !important;
+
 }
 
 .rego-link {

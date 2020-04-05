@@ -36,22 +36,19 @@ class Login extends React.Component {
 
     render() {
         return (
-            <div className='wrapper'>
+            <div className='activity-container'>
                 <div className="register-wrapper">
-                    <div className="register-column-one">
+                <div className='register-column-two'>
                         <h2> Login </h2>
-                    </div>
-
-                    <div className='register-column-two'>
-                        <div className='rego-wrapper'></div>
-                        <label>Username:</label>
-                        <input className='rego-input' type="text" name="username" onChange={this.handleChange} />
-                        <label>Password:</label>
-                        <input className='rego-input' type="password" name="password" onChange={this.handleChange} />
-                        <br></br>
-
-                        <button className='rego-button' type='button' onClick={this.handleClick}>Login</button>
-                        <Link to="/register" className='rego-link'><p> Create your account →  </p></Link>
+                        <div className='rego-wrapper'>
+                            <label className='rego-label'>Username:</label>
+                            <input className='rego-input' type="text" name="username" onChange={this.handleChange} />
+                        </div>
+                        <div className='rego-wrapper'>
+                            <label className='rego-label'>Password:</label>
+                            <input className='rego-input' type="password" name="password" onChange={this.handleChange} />
+                        </div>
+                        <button className='rego-button' type='button' onClick={this.handleClick}>Submit</button>
                     </div>
                 </div>
 
