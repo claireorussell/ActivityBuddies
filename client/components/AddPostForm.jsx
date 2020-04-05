@@ -2,7 +2,7 @@ import React from 'react'
 import { addPostApi } from '../api'
 import { connect } from 'react-redux'
 import { addPost } from '../actions'
-import {getDecodedToken} from 'authenticare/client'
+import { getDecodedToken } from 'authenticare/client'
 
 class AddPostForm extends React.Component {
   constructor(props) {
@@ -41,13 +41,10 @@ class AddPostForm extends React.Component {
 
   render() {
     return (
-      <div className='addPostFormWrapper'>
-        
-          <button className='pst-frm-bck-btn' onClick={this.props.goBack}>Go back</button>
-          <form className='addPostForm' onSubmit={this.handleSubmit}>
-          {/* Add new post form */}
+      <div>
 
-
+        <button className='pst-frm-bck-btn' onClick={this.props.goBack}>Whoops, go back</button>
+        <form className='addPostForm' onSubmit={this.handleSubmit}>
 
 
           <label className="frm-usr-lbl" htmlFor='name'>Notes: </label>
@@ -66,7 +63,7 @@ class AddPostForm extends React.Component {
             className='frm-usr-ipt'
             name='location_id' value={this.setState.location_id}
             onChange={this.handleChange}>
-            <option value=''>--Please select the location--</option>
+            <option value=''>Select your location</option>
             {this.props.locations.map(location => {
               return <option key={location.id} value={location.id}>{location.name}</option>
             })}
@@ -91,7 +88,7 @@ class AddPostForm extends React.Component {
             className='frm-usr-ipt'
             name='skill' value={this.setState.skill}
             onChange={this.handleChange}>
-            <option value=''>--Please select your skill level--</option>
+            <option value=''>Select your skill level</option>
             <option value='Beginner'>Beginner</option>
             <option value='Intermediate'>Intermediate</option>
             <option value='Advanced'>Advanced</option>
@@ -99,14 +96,14 @@ class AddPostForm extends React.Component {
           </select>
 
           <label className="frm-usr-lbl" htmlFor='name'>Date and time: </label>
-            <input className='frm-usr-ipt'
-              type="datetime-local" id="meeting-time"
-              name="dateTime"
-              min={new Date()} max="2040-06-14  T00:00" onChange={this.handleChange}>
-            </input>
-            <br /><br />
-          
-            <input className='frm-usr-ipt' type='submit' value='submit' />
+          <input className='frm-usr-ipt'
+            type="datetime-local" id="meeting-time"
+            name="dateTime"
+            min={new Date()} max="2040-06-14  T00:00" onChange={this.handleChange}>
+          </input>
+          <br /><br />
+
+          <input className='frm-usr-ipt' type='submit' value='submit' />
         </form>
       </div>
     )

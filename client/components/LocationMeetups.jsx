@@ -51,31 +51,30 @@ class LocationMeetups extends React.Component {
     }
 
     render() {
-    
-        return (
-            <React.Fragment>
 
-                <div className="LocationMeetupContainer">
+        return (
+
+            <div className="wrapper">
+                
+                    <div className='activityTitle'>
+                        <h1 className='activityName'>{this.props.currentLocation.name}</h1>
+                    </div>
+                    <div className='wrapperBody'>
                     <div className="widgetWrapper">
                         {
-                            this.props.currentActivity.id == 1 
-                                ? <div style={{display: this.state.loading ? 'none' : 'block'}}><link href="//www.surf-forecast.com/stylesheets/widget.css" className='TrailforksWidgetMap' media="screen" rel="stylesheet" type="text/css" /><div class="wf-width-cont surf-fc-widget"><div class="widget-container"><div class="external-cont"><iframe class="surf-fc-i" allowtransparency="true" src={this.props.location.widget} scrolling="no" frameborder="0" marginwidth="0" marginheight="0"></iframe></div></div></div></div> 
-                                : <div style={{display: this.state.loading ? 'none' : 'block'}}><iframe className='TrailforksWidgetMap' src={this.props.location.widget} scrolling="no" frameborder="0" allowfullscreen="1" width="400px" height="800px" id="map0" /></div>
-                       }
-
-                        { this.state.loading ? 'loading' : <a className='fml'>
-                       <img className='fmlImg' src="/images/fml.png" alt=" link to follow my lead site"/><p>Take a dog on your adventure!</p> 
-                       </a> }
-                        
+                            this.props.currentActivity.id == 1
+                                ? <div style={{ display: this.state.loading ? 'none' : 'block' }}><link href="//www.surf-forecast.com/stylesheets/widget.css" className='locationMap' media="screen" rel="stylesheet" type="text/css" /><div class="wf-width-cont surf-fc-widget"><div class="widget-container"><div class="external-cont"><iframe class="surf-fc-i" allowtransparency="true" src={this.props.currentLocation.widget} scrolling="no" frameborder="0" marginwidth="0" marginheight="0"></iframe></div></div></div></div>
+                                : <div style={{ display: this.state.loading ? 'none' : 'block' }}><iframe className='locationMap' src={this.props.currentLocation.widget} scrolling="no" frameborder="0" allowfullscreen="1" width="400px" height="800px" id="map0" /></div>
+                        }
+                        {this.state.loading ? 'loading' : ''}
                     </div>
 
-                    <div className="postListingWrapper">
-
+                    <div className="rightColumn">
                         {this.state.addingMeetup ? <AddPostForm goBack={this.deactivateMeetingForm} /> : <MeetupList handleClick={this.activateMeetingForm} posts={'hi'} />}
 
                     </div>
                 </div>
-            </React.Fragment>
+            </div>
         )
     }
 }
@@ -83,7 +82,7 @@ class LocationMeetups extends React.Component {
 function mapStateToProps(state) {
     return {
         posts: state.postList,
-        location: state.currentLocation,
+        currentLocation: state.currentLocation,
         currentActivity: state.currentActivity,
     }
 }

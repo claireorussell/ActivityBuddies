@@ -38,8 +38,6 @@ class MeetupList extends React.Component {
 
         return (
             <div className="meetupList">
-                <h2>{this.props.location.name}</h2>
-
                 <div className='skillAdd'>
                     <form className="">
                         <select className="skillDropdown" value={this.setState.skillLevel} onChange={this.handleChange}>

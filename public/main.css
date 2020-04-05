@@ -1,7 +1,4 @@
-h1 {
-    margin: 0px;
-    color: white;
-}
+
 
 .front-links {
     margin-top: 0px;
@@ -68,34 +65,30 @@ body {
 font-size: 2rem;
 /* font-family: 'Montserrat Subrayada', sans-serif; */
 padding: 0rem 0rem 0rem 2rem;
-color: white;
 margin-top: 0;
+}
+
+/* Location-Meetups CSS */
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 10%;
+    width: 80%;
 }
 
 .wrapperBody {
     display: flex;
-    justify-content: flex-start;
-    width: 100%;
-}
-.wrapper { 
-    color: black;
-    width: 100%;
-    height: 100%;
+    flex-direction: row;
 }
 
-/* Location-Meetups CSS */
-
-.loc-nav {
-    display: flex;
-    margin: 2px 30px 2px 30px;
-}
-
-.loc-home {
-    padding: auto;
-}
-
-.loc-hedr {
-    margin-left: 20%;
+.activityName {
+    text-align: center;
+    font-weight: lighter;
+    font-size: 7rem;
+    margin: 0;
+    border-bottom: 1px solid black;
+  
 }
 
 .locationList {
@@ -112,114 +105,63 @@ margin-top: 0;
     font-size: 16px;
 }
 
-.locationWrapper {
-    display: flex;
-    justify-content: right;
-    background-color: white;
-    width: 50%;
-}
-.locationWrapper h1 {
-    color:black;
-    text-align: center;
-    font-size: 5rem;
-    font-weight: lighter;
+.locationMap {
+    margin: 4rem 0 ;
+    width: 100%;
+    height: 400px;
+    border-radius: 10px;
 }
 
-.loc-btn{
-    width: 100%;
-    margin: 20px;
-}
-.locationBtns {
-    margin: 10px;
+.rightColumn {
+    margin: 3rem 0;
+    text-align: center;
+    justify-content: center;
 }
 
 .btn {
     border: none;
     color: black;
-    padding: 30px 15px;
+    padding: 30px 0px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 35px;
-    /* transition-duration: 0.4s; */
+    font-size: 3rem;
     width: 80%;
-    margin: 15px 65px;
     border: none;
     font-weight: lighter;
-
 }
 
-
 .btn:hover {
-
-    -webkit-transform: scale(1.3);
-    -ms-transform: scale(1.3);
-    transform: scale(1.3);
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
     transition-duration: 0.4s;
   }
 
 .widgetWrapper {
-    display: flex;
-    flex-direction: column;
-    /* justify-content: center; */
-    background-color: white;
     height: 900px;
     width: 65%;
     font-size: 40px;
     text-align: center;
 }
 
-.widget-container{
-    margin: 120px 0px 20px 50px; 
-    /* border: 2px solid #262626; */
-    /*border-bottom: 4px solid #262626;
-    box-shadow: 5px 10px 18px #000000;  */
-    height: 400px;
-    width: 700px;
 
-    /* for surf widget */
-}
-
-.locationMap {
-    margin: 120px 0px 20px 20px;
-    border: 2px solid #262626;
-    /*border-bottom: 4px solid #262626; */
-    width: 800px;
-    height: 400px;
-    /* box-shadow: 5px 10px 18px #000000; */
-   
-    /* for riding widget */
-}
+/* MEETUP PAGE */
 
 .TrailforksWidgetMap {
-    margin: 120px 0px 20px 50px;
-    border: 2px solid #262626;
-    /*border-bottom: 4px solid #262626; */
-    width: 800px;
+    margin: 4rem 0;
+    width: 400px;
     height: 400px;
-    /* box-shadow: 5px 10px 18px #000000; */
-   
-    /* for riding widget */
+    margin: 1rem;
 }
 
-.postListingWrapper {
-    display: flex;
-    justify-content: center;
-    background-color: white;
-    width: 50%;
-    margin: 0px;
-    padding:0px;
-}
 
 .meetupList {
     display: flex;
     flex-direction: column;
-    /* background-color: #F3F5F0; */
-    width: 75%;
+    width: 90%;
     height: 95%;
-    margin-top: 30px;
     text-align: center;
-    border-radius: 2em;
 }
 
 .postStart {
@@ -234,14 +176,13 @@ margin-top: 0;
     flex-wrap: wrap;
     overflow-y: scroll;
     height: 65%;
+    margin: 0 2rem;
 }
 
 .meetupList h2 {
-    height: 8%;
-    font-size: 4.5rem;
+    font-size: 4rem;
     font-weight: lighter;
     color: black;
-    padding: 0px 0px 20px 0px;
     margin-block-start: 0em;
     margin-block-end: 0em;
     margin-inline-start: 0px;
@@ -251,12 +192,14 @@ margin-top: 0;
 .meetupCard {
     display: flex;
     flex-direction: column;
-    background-color: rgb(242, 242, 242);
+    background-color: rgba(242, 242, 242, 0.386);
     color: black;
     width: 85%;
     text-align: left;   
     border-radius: 7px;
-    height: 12rem;
+    height: auto;
+    padding:1rem;
+    margin-bottom: 1rem;
 }
 
 .meetupCardInActive {
@@ -285,10 +228,9 @@ margin-top: 0;
 
 
 .meetupCard p {
-    text-align: center;
     margin-top: 0px;
     margin-bottom: 0px;
-    font-weight: light;
+    font-size: 1rem;
 }
 
 .meetupCard h3 {
@@ -310,10 +252,10 @@ margin-top: 0;
 
 .flagButton {
     border: none;
+    background-color: rgba(242, 242, 242, 0.386);
     border-radius: 7px;
     height: 30px;
-    background-color: black;
-    color: green;
+    color: rgb(21, 181, 21);
     font-size: 1.25rem;
     margin: 1.1rem;
 
@@ -393,39 +335,32 @@ color: rgb(191, 188, 188);
 .pst-frm-bck-btn {
     border: none;
     border-radius: 7px;
-    height: 40px;
-    background-color: black;
-    color: #F3F5F0;
-    margin-top: 30px;
-    width: 80%;
-    transition-duration: 0.4s;
-    margin: 10px 0px 0px 40px;
+    height: auto;
+    color: black;
+    width: 30rem;
     font-size: 30px;
-
+    margin-top: 1rem;
 }
 
 .pst-frm-bck-btn:hover {
     background-color: lightgray;
-
 }
 
-.frm-usr-lbl{
-    color: white;
-
-}
 
 .frm-usr-ipt {
-    background-color: lightgray;
+    background-color: rgba(242, 242, 242, 0.386);
     width: 80%;
-    align-items: center;
+    font-size: 1rem;
     margin: auto;
-    border-radius: 7px;
+    border-radius: 0.3rem;
     height: 40px;
+    text-decoration: none !important;
+    border: none;
+    box-shadow: none !important;
 }
 
-.frm-usr-ipt::placeholder{
-    font-family: 'Noto Sans JP' ;
-}
+
+/* REGISTER PAGE */
 
 .register-wrapper {
     display: flex;
@@ -483,11 +418,6 @@ color: rgb(191, 188, 188);
 .rego-link {
     color: white;
     text-decoration: none !important;
-}
-
-.about-blurb p {
-    padding: 0px;
-    margin:0px;
 }
 
 
