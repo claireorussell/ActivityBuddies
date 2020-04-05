@@ -12,7 +12,7 @@
     "dev:server": "nodemon --watch server",
     "test": "jest --watchAll",
     "start": "node server",
-    "postinstall": "webpack"
+    "postinstall": "webpack && knex migrate:latest"
   },
   "author": "EDA",
   "license": "ISC",
