@@ -56,14 +56,11 @@ body {
     font-size: 25px;
     font-family: 'Noto Sans JP' ;
     color: black;
-    /* background-image: url(images/hill.jpg);
-    background-size: cover;
-    background-repeat: no-repeat; */
+
 }
 
 #logo {
 font-size: 2rem;
-/* font-family: 'Montserrat Subrayada', sans-serif; */
 padding: 0rem 0rem 0rem 2rem;
 margin-top: 0;
 }
@@ -223,6 +220,7 @@ margin-top: 0;
     height: auto;
     width: auto;
     border: none;
+    outline: none !important;
 }
 
 
@@ -348,6 +346,9 @@ justify-content: space-evenly;
    color:  rgba(242, 242, 242, 0.386);
 }
 
+.submitBtn:hover {
+    color:  rgba(242, 242, 242, 0.386);
+}
 
 .frm-usr-ipt {
     background-color: rgba(242, 242, 242, 0.386);
@@ -396,6 +397,9 @@ justify-content: space-evenly;
     outline: none;
 }
 
+.rego-button:hover {
+    color:  rgba(242, 242, 242, 0.386);
+}
 
 
 .register-column-two {
