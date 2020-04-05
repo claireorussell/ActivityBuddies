@@ -36,7 +36,7 @@ class Login extends React.Component {
 
     render() {
         return (
-            <React.Fragment>
+            <div className='wrapper'>
                 <div className="register-wrapper">
                     <div className="register-column-one">
                         <h2> Login </h2>
@@ -56,11 +56,7 @@ class Login extends React.Component {
                 </div>
 
 
-
-
-
-
-            </React.Fragment>
+                </div>
         )
     }
 }

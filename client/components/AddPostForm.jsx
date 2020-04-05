@@ -43,12 +43,9 @@ class AddPostForm extends React.Component {
     return (
       <div>
 
-        <button className='pst-frm-bck-btn' onClick={this.props.goBack}>Whoops, go back</button>
         <form className='addPostForm' onSubmit={this.handleSubmit}>
-
-
           <label className="frm-usr-lbl" htmlFor='name'>Notes: </label>
-          <textarea
+          <input
             className='frm-usr-ipt'
             type='text'
             name='notes'
@@ -101,9 +98,11 @@ class AddPostForm extends React.Component {
             name="dateTime"
             min={new Date()} max="2040-06-14  T00:00" onChange={this.handleChange}>
           </input>
-          <br /><br />
 
-          <input className='frm-usr-ipt' type='submit' value='submit' />
+          <div className='backOrSubmit'>
+            <input className='submitBtn' type='submit' value='SUBMIT' />
+            <button className='pst-frm-bck-btn' onClick={this.props.goBack}>X</button>
+          </div>
         </form>
       </div>
     )

@@ -319,17 +319,20 @@ color: rgb(191, 188, 188);
 }
 
 .addPostForm {
-
     display: flex;
     flex-direction: column;
     background-color: white;
-    width: 100%;
+    width: 30rem;
     height: 75%;
-    margin-top: 30px;
     text-align: center;
-    border-radius: 2em;
     justify-content: center;
-    padding: 10px;
+    padding: 1rem 0 1rem 1rem;
+}
+
+.backOrSubmit {
+display: flex;
+flex-direction: row;
+justify-content: space-evenly;
 }
 
 .pst-frm-bck-btn {
@@ -337,13 +340,12 @@ color: rgb(191, 188, 188);
     border-radius: 7px;
     height: auto;
     color: black;
-    width: 30rem;
+    width: auto;
     font-size: 30px;
-    margin-top: 1rem;
 }
 
 .pst-frm-bck-btn:hover {
-    background-color: lightgray;
+   color:  rgba(242, 242, 242, 0.386);
 }
 
 
@@ -356,9 +358,17 @@ color: rgb(191, 188, 188);
     height: 40px;
     text-decoration: none !important;
     border: none;
-    box-shadow: none !important;
+    outline: none !important;
+    border: none;
 }
 
+.submitBtn {
+    margin: 1rem;
+    font-size: 2rem;
+    height: auto;
+    width: auto;
+    border: none !important;
+}
 
 /* REGISTER PAGE */
 
