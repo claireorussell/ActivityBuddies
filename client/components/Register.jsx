@@ -18,11 +18,12 @@ class Register extends React.Component {
     }
 
     handleClick = () => {
+        console.log(window.location.origin)
         register({ // what's register? Do I put all the elements of state i.e user info into this??
             username: this.state.username,
             password: this.state.password, 
         }, {
-            baseUrl: process.env.BASE_API_URL // see .env and webpack.config.js
+            baseUrl: window.location.origin + "/api/v1" // see .env and webpack.config.js
         })
             .then((token) => {
                 if (isAuthenticated()) {
