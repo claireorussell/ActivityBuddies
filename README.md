@@ -2,7 +2,7 @@
 
 ##Final Group Project
 
-Have fun. Cement the stack. Master full stack development. One week. That's what I'm going to tell them in the interview.
+Have fun. Cement the stack. Master full stack development. One week.
 
 The focus of this app is to provide a way for people to have new experiences and make new friends via outdoor Wellington activities. Our hope is that we have a place for people looking to expand both their friend group and adventurous horizons.
 
@@ -25,9 +25,7 @@ We will not be making this website responsive to mobile and other devices initia
 ## User Stories
 
 ### MVP
-
 As a user I should be able to...
-
 * navigate through the pages of the website without issue.
 * select my sport/outdoor activity of choice.
 * see a list of tracks/locations specific to skill level.
@@ -35,8 +33,8 @@ As a user I should be able to...
 * create a meetup with a skill-level and location, as well as some other junk.
 * say if I am going to attend a meetup.
 
-### Stretch
 
+### Stretch
 * ...register and login to the website.
 * ...and only be able to make new postings if I am a registered user.
 * ...I should be able to see anyone who is going to attend a meetup I have created.
@@ -44,6 +42,8 @@ As a user I should be able to...
 * ...I should have a user page and profile and shows my meetups and a pretty photo of me.
 * ...Create a new sport/activity that specifically has to be outside.
 * ... Set expiry date on post which would delete it.
+
+
 ## Views (Client Side)
   | name | purpose |
   | --- | --- |
@@ -53,8 +53,8 @@ As a user I should be able to...
 
   * in the meetups we have the post list, the widget, and the 'add a post' form.
 
-## Reducers (Client Side)
 
+## Reducers (Client Side)
   | name | purpose |
   | --- | --- |
   | auth(*stretch) | Store information regarding user logins, auth status and auth errors | 
@@ -63,8 +63,8 @@ As a user I should be able to...
   | currentLocation | Hold current location information |
   | posts | posts and changes posts |
   
+  
 ## Actions (Client Side)
-
   | type | data | purpose |
   | --- | --- | --- |
   | GET_ACTIVITY | activity | For accessing the chosen activity (inside activity data includes difficulty, locations and meetup posts)| 
@@ -77,7 +77,6 @@ As a user I should be able to...
 
 
 ## API (Client - Server)
-
 | Method | Endpoint | Protected | Usage | Response |
 | --- | --- | --- | --- | --- |
 | Get | /api/v1/activities | No | Get activities | Array of activity objects |
@@ -109,8 +108,6 @@ As a user I should be able to...
   | activity_id | integer | foreign key of activities |
 
 ### Posts
-
-
  | Column Name | Data Type | Purpose |
  | --- | --- | --- |
  | id | Integer | Unique identifier for each post |
@@ -122,101 +119,3 @@ As a user I should be able to...
  | skill | string | post skill level of post |
  | location_id | integer | Foreign key for locations |
  ---
-
-
-## Setup
-
-Run the following commands in your terminal:
-
-```sh
-npm install
-npx knex migrate:latest
-npx knex seed:run
-mv .env.example .env
-```
-
-To run in development:
-```sh
-npm run dev
-```
-
-To run in production:
-```sh
-npm start
-```
-
-### Git - Managing Branches
-
-Pull down dev branch - git pull origin dev
-
-Checkout to feature branch - git checkout feature_branch
-
-git add
-
-git commit -m "commmit message"
-
-git checkout dev
-
-.git pull origin dev
-
-..git checkout feature_branch
-
-...git pull origin dev
-
-fix all conflicts - check localhost still works*
-
-git add
-
-git commit
-
-git push origin feature_branch
-
-create pull request in Github
-
-notify git master
-
-
-
-## Heroku!!!
-
-### Creating your app
-
-Create your app with `heroku create [name]`
-
-You can check that this was successful by running `heroku apps` to view a list of your apps
-
-
-### Adding postgres
-
-Add postgresql (hobby dev) to your app at `https://dashboard.heroku.com/apps/[APP NAME HERE]/resources`
-
-Check that pg has been added by running `heroku addons` to ensure the postgresql db is on your app
-
-
-### Deploying!
-
-I have created several npm scripts that will be useful for deploying your app to heroku easily.
-
-To push your local master branch to your heroku app:
-```sh
-npm run h:deploy
-```
-
-Run heroku migrations:
-```sh
-npm run h:migrate
-```
-
-Run heroku seeds:
-```sh
-npm run h:seed
-```
-
-If ever you need to rollback, you can also:
-```sh
-npm run h:rollback
-```
-
-
-### Ta-Da!
-Your app should be deployed!
