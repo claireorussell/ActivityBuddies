@@ -1,4 +1,4 @@
-# ActivityBuddies
+# MOVE
 
 ##Final Group Project
 
